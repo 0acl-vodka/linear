@@ -44,15 +44,14 @@ public:
 	//외적(x1 * y2 - y1 * x2)
 	double cross(const Vec& v) const {
 		return x * v.y - y * v.x;
-	}
-};
+	} };
 
 추가로 가장 중요한 외적 구하는 식도 구성했으나, 아직 3차원 z값을 고려하지는 않아 식이 간단함.
 
-//벡터 class 3개를 받아 삼각형 ABC의 각 점으로 이름변환.  
-class Triangle {
-public:
-	Vec A, B, C;
+	//벡터 class 3개를 받아 삼각형 ABC의 각 점으로 이름변환.  
+	class Triangle {
+		public:
+		Vec A, B, C;
 	//생성자
 	Triangle(const Vec& A, const Vec& B, const Vec& C)
 		: A(A), B(B), C(C) {
@@ -80,8 +79,7 @@ public:
 		//세 외적의 부호가 전부 같으면 1, 다르면 0 출력.
 		return (c1 >= 0 && c2 >= 0 && c3 >= 0) ||
 			(c1 <= 0 && c2 <= 0 && c3 <= 0);
-	}
-};
+	}};
 
 시작점이 같은 변끼리 외적후, 그 값의 부호가 전부 같으면 1, 하나라도 다르면 0을 출력하게 함.
 
