@@ -11,20 +11,20 @@
 
 # 보고서
 
-class Vec {
-public:
-	double x;
-	double y;
+	class Vec {
+		public:
+			double x;
+			double y;
 
-	//기본 생성자
-	Vec() {}
-	//생성자
-	Vec(double x, double y) : x(x), y(y) {}
+		//기본 생성자
+		Vec() {}
+		//생성자
+		Vec(double x, double y) : x(x), y(y) {}
 
-	//변수 초기화 함수
-	void input() {
-		cin >> x >> y;
-	}
+		//변수 초기화 함수
+		void input() {
+			cin >> x >> y;
+		}
 기본적으로 삼각형과 점의 벡터값을 받을 class를 제일 먼저 설계후,
 
 	//덧셈(+ 연산자의 의미를 각 벡터값을 덧셈하는 것으로 정의.)
@@ -34,7 +34,7 @@ public:
 		return { x + v.x, y + v.y };
 	}
 
-	//뺄셈(- 연산자의 의미를 뺄셈하는 것으로 정의.)
+	//뺄셈(- 연산자의 의미를 뺄셈하는 것으로 정의.)
 	Vec operator-(const Vec& v) const {
 		return { x - v.x, y - v.y };
 	}
